@@ -31,18 +31,13 @@ class OrganizerDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_organiger_details)
 
-
         tvaddphotos =  findViewById(R.id.tvaddphotos)
 
         var rl9:RelativeLayout = findViewById(R.id.rl9)
-
-
         rl9.setOnClickListener {
             val bottomSheetFragment = BottomSheetFragment()
             bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
         }
-
-
 
         // Show Bottom Sheet on button click
         tvaddphotos.setOnClickListener {
@@ -50,6 +45,7 @@ class OrganizerDetailsActivity : AppCompatActivity() {
             bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
         }
 
+        // todo
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
 
