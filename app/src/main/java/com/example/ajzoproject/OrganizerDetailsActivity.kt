@@ -74,6 +74,8 @@ class OrganizerDetailsActivity : AppCompatActivity() {
 //        }
 
 
+
+
         // Set up your capture button click listener here
         viewFinder.setOnClickListener {
             takePhoto()
