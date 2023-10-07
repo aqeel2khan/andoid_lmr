@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicDetailsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="20dp">
+
+        <include layout="@layout/custom_toolbar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/rl1"
+        android:id="@+id/rl2"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="132dp"
+                android:layout_height="26dp"
+                android:text="Basic Details"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/tvbasic"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/redlight"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="left|center_vertical"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tvstep1"
+                android:layout_below="@+id/tvbasic"
+                android:textColor="@color/grey2"
+                android:text="Step1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/grey2"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tvnameyour"
+                android:layout_below="@+id/tvstep1"
+                android:text="Name Your event and tell event-goers why they should com"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="left|center"
+                android:id="@+id/tvadddetails"
+                android:text="Add details that highlight what makes it unique"
+                android:textColor="@color/grey2"
+                android:layout_below="@+id/tvnameyour"
+                />
+            <LinearLayout
+                android:layout_width="334dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll2"
+                android:layout_below="@+id/tvadddetails"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="18dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center_vertical"
+                    android:id="@+id/tveventname"
+                    android:textColor="@color/grey2"
+                    android:text="Event Name"/>
+
+                <EditText
+                    android:layout_width="248dp"
+                    android:layout_height="19dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey3"
+                    android:id="@+id/etsyedali"
+                    android:layout_gravity="left|center_vertical"
+                    android:hint="Syed Ali Weds Mehajabin Begum"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/grey4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:id="@+id/ll3"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="155dp"
+                    android:layout_height="18dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center_vertical"
+                    android:id="@+id/tvtypeof"
+                    android:textColor="@color/grey2"
+                    android:text="Type of Event"/>
+
+<!--                <TextView-->
+<!--                    android:layout_width="156dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textColor="@color/grey3"-->
+<!--                    android:id="@+id/tvmarriage"-->
+<!--                    android:layout_gravity="left|center_vertical"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:hint="Marriage"-->
+<!--                    />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="9dp"-->
+<!--                    android:layout_marginLeft="285dp"-->
+<!--                    android:id="@+id/imicon1"-->
+<!--                    android:src="@drawable/iconarrey"/>-->
+                <!-- activity_main.xml -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+                    <Spinner
+                        android:id="@+id/custom_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_dropdown_background"
+                        android:layout_gravity="center"
+                         />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll3"
+                android:layout_marginTop="10dp"
+                android:id="@+id/view4"
+                android:background="@color/grey4"/>
+
+
+            <LinearLayout
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:id="@+id/ll4"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center_vertical"
+                    android:id="@+id/tvchoose"
+                    android:textColor="@color/grey3"
+                    android:text="Choose Event Category"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Spinner
+                        android:id="@+id/custom_spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_dropdown_background"
+                        android:layout_gravity="center"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/ll4"
+                android:id="@+id/view6"
+                android:background="@color/grey4"/>
+
+
+            <LinearLayout
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view6"
+                android:id="@+id/ll5"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:padding="2dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="left|center_vertical"
+                    android:id="@+id/tvnumberofpeopel"
+                    android:textColor="@color/grey3"
+                    android:text="Total Maximum Capacity"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+                    <Spinner
+                        android:id="@+id/custom_spinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_dropdown_background"
+                        android:layout_gravity="center"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/ll5"
+                android:layout_marginTop="3dp"
+                android:id="@+id/view7"
+                android:background="@color/grey4"/>
+
+
+            <LinearLayout
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll7"
+                android:orientation="vertical"
+                android:layout_below="@+id/view7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="2dp"
+                    android:textColor="@color/grey3"
+                    android:textSize="14sp"
+                    android:id="@+id/tvpublishingMehtod"
+                    android:text="Publishing Mehtod"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/radioOption1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Public"
+                        android:checked="true" />
+
+
+
+                    <RadioButton
+                        android:id="@+id/radioOption3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Private"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+
+                        android:background="@color/grey4"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ll8"
+                android:orientation="vertical"
+                android:layout_below="@+id/ll7">
+
+                <TextView
+                    android:layout_width="285dp"
+                    android:layout_height="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey3"
+                    android:textSize="14sp"
+                    android:id="@+id/tvticket"
+                    android:text="TicKet"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/radioOption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pepele(expected)"
+                        android:checked="true" />
+
+
+
+                    <RadioButton
+                        android:id="@+id/radioOption4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paid"
+                        />
+                    <View
+                        android:layout_width="301dp"
+                        android:layout_height="1dp"
+                        android:background="@color/grey4"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="18dp"
+                android:text="Age Group"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/ll8"
+                android:textStyle="bold"
+                android:id="@+id/tvagegroup"
+                android:textColor="@color/grey3"
+              />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll16"
+                android:padding="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tvagegroup">
+
+                <Spinner
+                    android:id="@+id/custom_spinner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_dropdown_background"
+                    android:layout_gravity="center"
+                    />
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/drop_down"></ImageView>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view5"
+                android:layout_below="@+id/ll16"
+                android:background="@color/grey3"
+                />
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/ll9"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/view5"
+                android:background="@color/purple"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.50"
+                    android:layout_height="49dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="SAVE &amp; CONTINUE"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:id="@+id/tvsave"
+                    android:textColor="@color/grey"
+                    />
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="0.50"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/icon_right"
+                    android:layout_toRightOf="@+id/tvsave"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="129dp"
+                android:layout_height="4dp"
+                android:layout_marginLeft="117dp"
+                android:layout_below="@+id/ll9"
+                android:layout_marginTop="20dp"
+                android:background="@color/blue"/>
+
+
+        </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

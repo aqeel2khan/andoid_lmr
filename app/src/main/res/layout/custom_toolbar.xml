@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/design_default_color_background"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="16dp"
+                android:src="@drawable/aareleft"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/imareleft"
+                android:layout_marginStart="17dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_shap_lightpurpal"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/view1"/>
+
+                <View
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_shap_grey1"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/view2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="10dp"/>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/view3"
+                    android:background="@drawable/circle_shap_grey1"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    <!-- You can add any custom views or widgets here -->
+
+
+
+
+</androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

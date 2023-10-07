@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketingSeatDetailsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="20dp">
+
+        <include layout="@layout/custom_toolbar" />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvticketseatdetails_top"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="15dp"
+            android:text="Ticketing/ Seat Details"
+            android:textColor="@color/redlight"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvstep_top6"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_below="@+id/tvticketseatdetails_top"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:text="Step 6"
+            android:textColor="@color/grey2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvtelleventgoerswhen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvstep_top6"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:text=" tell event-goers when your event starst and ends so they can make plans to attend"
+            android:textColor="@color/grey2"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ll2"
+            android:weightSum="2"
+            android:layout_below="@+id/tvtelleventgoerswhen"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Free"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/light_purple"
+                android:id="@+id/tvfree"
+                android:textSize="15dp"
+                android:background="@drawable/circle_shap_allo"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Paid"
+                android:textColor="@color/light_purple"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvpaid"
+                android:background="@drawable/circel_shep_white"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ll3"
+            android:layout_below="@+id/ll2"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.80"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:text="Name"
+                android:id="@+id/tvName"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.40"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="0.80"
+                android:id="@+id/tvAvailablequantity"
+                android:text="Avilable Quantitity"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:id="@+id/ll4"
+            android:layout_below="@+id/ll3"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.80"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey2"
+                android:text="VIP Seats"
+                android:id="@+id/tvvipseats"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.40"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:hint="Quantity"
+                android:textColor="@color/grey2"
+                android:background="@null"
+                android:layout_weight="0.80"
+                android:gravity="left|center_vertical"
+                android:id="@+id/tvquantity"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/ll4"
+            android:id="@+id/ll5"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.80"
+                android:id="@+id/view4"
+                android:background="@color/grey1"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.40"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:id="@+id/view5"
+                android:layout_weight="0.80"
+                android:background="@color/grey1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ll6"
+            android:layout_below="@+id/ll5"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tvticketsale"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.80"
+                android:gravity="left|center_vertical"
+                android:text= "End Date Ticket Sale"
+                android:textColor="@color/grey2"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.40"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="0.80"
+                android:id="@+id/tvend_time_avilable"
+                android:text="End Time"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/ll6"
+            android:id="@+id/ll7"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.8"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="@color/grey2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toRightOf="@+id/iv_available_calender"
+                    android:id="@+id/tv_available_endDate"
+                    android:gravity="left|center_vertical"
+                    android:textSize="11dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/iv_available_calender"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/date_icon"
+                    android:layout_marginTop="8dp"
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.40"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.8"
+                >
+
+                <TextView
+                    android:id="@+id/tv_available_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@+id/iv_available_end_time"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grey2"
+                    android:textSize="11dp" />
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/time_icon"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/iv_available_end_time"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/ll7"
+            android:id="@+id/ll8"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.80"
+                android:id="@+id/view6"
+                android:background="@color/grey1"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight=".40"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight=".80"
+                android:id="@+id/view7"
+                android:background="@color/grey1"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Tickets Sales"
+            android:textSize="15sp"
+            android:textColor="@color/grey3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/ll8"
+            android:id="@+id/tv_ticket_sales"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:id="@+id/ll9"
+            android:layout_below="@+id/tv_ticket_sales"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.80"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:gravity="left|center_vertical"
+                android:text="Start Date"
+                android:id="@+id/tv_ticket_sales_start_date"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.40"
+                android:layout_height="wrap_content">
+
+            </View>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:layout_weight="0.80"
+                android:gravity="left|center_vertical"
+                android:id="@+id/tvlable_ticket_sales_start_time"
+                android:text="Start Time"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="2"
+            android:layout_below="@+id/ll9"
+            android:id="@+id/ll10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.8"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/grey2"
+                    android:id="@+id/tv_ticket_sales_startDate"
+                    android:gravity="left|center_vertical"
+                    android:textSize="11dp"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/iv_tickets_sales_startDate"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/date_icon"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"></View>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.8"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/tv_ticket_sales_start_time"
+                    android:textColor="@color/grey2"
+                    android:gravity="left|center_vertical"
+                    android:textSize="11dp"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/time_icon"
+                    android:id="@+id/iv_tickets_start_time"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/ll10"
+            android:id="@+id/ll11"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.80"
+                android:id="@+id/view67"
+                android:background="@color/grey1"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.40"
+                android:layout_height="2dp">
+
+            </View>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.80"
+                android:id="@+id/view8"
+                android:background="@color/grey1"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:id="@+id/ll20"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll11"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.80"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:gravity="left|center_vertical"
+                android:text="End Date"
+                android:id="@+id/tv_leble_end_date"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.40"
+                android:layout_height="wrap_content">
+
+            </View>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:textColor="@color/grey2"
+                android:layout_weight="0.80"
+                android:gravity="left|center_vertical"
+                android:id="@+id/tv_lable_end_time"
+                android:text="End Time"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:weightSum="2"
+            android:id="@+id/ll12"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/ll20"
+            android:orientation="horizontal"
+            >
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_weight="0.8"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textColor="@color/grey2"-->
+<!--                android:gravity="left|center_vertical"-->
+<!--                android:text="End Date"-->
+<!--                android:id="@+id/tv_lable_end_calendar"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="2dp"></View>
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textColor="@color/grey2"-->
+<!--                android:layout_gravity="left|center_vertical"-->
+<!--                android:layout_weight="0.8"-->
+<!--                android:id="@+id/tvendtime2"-->
+<!--                android:text="end Time"/>-->
+
+            <LinearLayout
+                android:id="@+id/ll13"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.80">
+
+                    <TextView
+                        android:id="@+id/tv_end_date_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/grey2"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_end_date_lable"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/date_icon" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.4"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.80">
+
+                    <TextView
+                        android:id="@+id/tv_end_time_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/grey2"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_end_time_lable"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_end_time_sale"
+                        android:src="@drawable/time_icon" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_below="@+id/ll12"
+            android:id="@+id/ll14"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight=".8"
+                android:id="@+id/view68"
+                android:background="@color/grey1"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.4"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.8"
+                android:background="@color/grey1"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvaddmoreticket"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll14"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="+Add More Ticket"
+            android:textColor="@color/grey3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:weightSum="2"
+            android:id="@+id/ll15"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/tvaddmoreticket"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_shep_blue"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.50"
+                android:layout_height="49dp"
+                android:layout_marginLeft="32dp"
+                android:text="SAVE &amp; CONTINUE"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:id="@+id/tvsave"
+                android:textColor="@color/grey"
+                />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="0.50"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/icon_right"
+                android:layout_toRightOf="@+id/tvsave"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="129dp"
+            android:layout_height="4dp"
+            android:layout_marginLeft="123dp"
+            android:layout_below="@+id/ll15"
+            android:layout_marginTop="30dp"
+            android:background="@color/blue"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="0.40" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+

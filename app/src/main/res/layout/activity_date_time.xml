@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateTimeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="20dp"
+        >
+        <include layout="@layout/custom_toolbar" />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/ll1"
+    android:id="@+id/rl2"
+    android:layout_marginLeft="22dp"
+    android:layout_marginRight="22dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="126dp"
+        android:layout_height="26dp"
+        android:text="Date &amp; Time"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/tvdatetime"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/redlight"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:textSize="12sp"
+        android:layout_below="@+id/tvdatetime"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvstep2"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/grey2"
+        android:text="Step 2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="13sp"
+        android:textColor="@color/grey2"
+        android:layout_below="@+id/tvstep2"
+        android:id="@+id/tvtelleventgoer"
+        android:gravity="left|center_vertical"
+        android:text="Tell event-goer when your event starts and ends so they can make plans to attend."
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll2"
+        android:weightSum="2"
+        android:layout_below="@+id/tvtelleventgoer"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SIngle Day Event"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/tvsingledayevent"
+            android:background="@drawable/circel_shep_white"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Recurring Event"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tvrecurringevent"
+            android:background="@drawable/circle_shap_allo"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="323dp"
+        android:layout_height="21dp"
+        android:textColor="@color/grey2"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left|center_vertical"
+        android:layout_below="@+id/ll2"
+        android:textStyle="bold"
+        android:id="@+id/tvfirsteventdetails"
+        android:text="First Event Details"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll3"
+        android:layout_below="@+id/tvfirsteventdetails"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.80"
+            android:textSize="12dp"
+            android:textColor="@color/grey2"
+            android:gravity="left|center_vertical"
+            android:text="Start Date"
+            android:id="@+id/tvstartdate"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.40"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/grey2"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="0.80"
+            android:id="@+id/tvstarttime"
+            android:text="Start Time"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:weightSum="2"
+        android:id="@+id/ll4"
+        android:layout_below="@+id/ll3"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.80"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tv_first_event_start_date"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/iv_first_event_start_date"
+                android:textColor="@color/grey2"
+                android:gravity="left|center_vertical"
+                android:textSize="15dp"/>
+
+            <ImageView
+                android:id="@+id/iv_first_event_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/date_icon" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.40"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.80"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tvStartTime"
+                android:textColor="@color/grey2"
+                android:layout_toLeftOf="@+id/iv_first_event_StartTime"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="15dp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/time_icon"
+                android:layout_marginTop="10dp"
+                android:id="@+id/iv_first_event_StartTime"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@+id/ll4"
+        android:id="@+id/ll5"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:id="@+id/view4"
+            android:layout_weight="0.80"
+            android:background="@color/grey1"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.40"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.80"
+            android:id="@+id/view5"
+            android:background="@color/grey1"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll6"
+        android:layout_below="@+id/ll5"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.80"
+            android:textSize="12dp"
+            android:textColor="@color/grey2"
+            android:gravity="left|center_vertical"
+            android:text="End Date"
+            android:id="@+id/tvenddate"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.40"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textColor="@color/grey2"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="0.80"
+            android:id="@+id/tvendtime"
+            android:text="End Time"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:weightSum="2"
+        android:layout_below="@+id/ll6"
+        android:id="@+id/ll7"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.80"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/grey2"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/iv_first_event_end_date"
+                android:id="@+id/tviv_first_event_end_date"
+                android:gravity="left|center_vertical"
+                android:textSize="11sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/iv_first_event_end_date"
+                android:src="@drawable/date_icon"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.40"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.80"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tv_first_event_endTime"
+                android:textColor="@color/grey2"
+                android:layout_toRightOf="@+id/iv_first_event_endTime"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textSize="11sp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/time_icon"
+                android:layout_marginTop="10dp"
+                android:id="@+id/iv_first_event_endTime"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@+id/ll7"
+        android:id="@+id/ll8"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:id="@+id/view6"
+            android:layout_weight="0.80"
+            android:background="@color/grey1"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.40"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:id="@+id/view7"
+            android:layout_weight="0.80"
+            android:background="@color/grey1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll8"
+        android:layout_marginLeft="22dp"
+        android:id="@+id/ll9"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/ch1"
+            android:textColor="@color/grey3"
+            android:text="Display start time"
+            ></CheckBox>
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/tvthe1"
+            android:layout_marginLeft="30dp"
+            android:text="The start time of your event will be displayed to attendees"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/ch2"
+            android:textColor="@color/grey3"
+            android:text="Display start time"
+            ></CheckBox>
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/tvthe2"
+            android:layout_marginLeft="30dp"
+            android:text="The start time of your event will be displayed to attendees"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="+ Add More Date"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_below="@+id/ll9"
+        android:id="@+id/tvaddmoredate"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="28dp"
+        android:background="@drawable/circel_shep_white"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:weightSum="2"
+        android:id="@+id/ll10"
+        android:layout_below="@+id/tvaddmoredate"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_shep_blue"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.50"
+            android:layout_height="49dp"
+            android:layout_marginLeft="32dp"
+            android:text="SAVE &amp; CONTINUE"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:id="@+id/tvsave"
+            android:textColor="@color/grey"
+            />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_weight="0.50"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_right"
+            android:layout_toRightOf="@+id/tvsave"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="129dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="123dp"
+        android:layout_below="@+id/ll10"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"/>
+
+
+</RelativeLayout>
+
+
+
+</RelativeLayout>
