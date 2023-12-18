@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_image_screen2"
     tools:context=".LamereretensActivity">
+
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/ic_arrow_back"
+     android:layout_marginTop="30dp"
+     android:layout_marginLeft="10dp"
+     android:id="@+id/back_arrow"
+     />
+
  <TextView
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:text="Welcome to"
      android:textSize="18sp"
+     android:layout_below="@id/back_arrow"
      android:padding="3dp"
      android:id="@+id/tvwelcometo2"
      android:layout_centerHorizontal="true"
@@ -79,7 +90,7 @@
       android:id="@+id/tvcountry"
       android:textSize="16sp"
       android:layout_marginLeft="30dp"
-      android:textColor="@color/purple"
+      android:textColor="@color/grey"
       />
 
   <TextView
@@ -87,13 +98,12 @@
       android:layout_height="40dp"
       android:layout_weight="1.40"
       android:text="Mobile Number"
-      android:background="@drawable/circle_shap"
       android:gravity="left|center_vertical"
       android:textSize="16sp"
       android:id="@+id/tvmobileno"
       android:layout_marginRight="30dp"
       android:layout_marginLeft="5dp"
-      android:textColor="@color/purple"
+      android:textColor="@color/grey"
       />
 
  </LinearLayout>
@@ -114,7 +124,7 @@
       android:id="@+id/tv965kw"
       android:textSize="16sp"
       android:layout_marginLeft="25dp"
-      android:textColor="@color/purple"
+      android:textColor="@color/grey"
       />
 
   <TextView
@@ -122,13 +132,13 @@
       android:layout_height="20dp"
       android:layout_weight="1.40"
       android:text="09874783210"
-      android:background="@drawable/circle_shap"
+      android:background="@drawable/text_field_shape"
       android:gravity="left|center_vertical"
       android:textSize="16sp"
       android:id="@+id/tvnumber"
       android:layout_marginRight="30dp"
       android:layout_marginLeft="5dp"
-      android:textColor="@color/purple"
+      android:textColor="@color/grey"
       />
  </LinearLayout>
  <View
