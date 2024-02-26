@@ -5,15 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BasicDetailsActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:id="@+id/rl1"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_height="20dp">
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/rl1"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:layout_height="20dp">-->
 
-        <include layout="@layout/custom_toolbar" />
+<!--        <include layout="@layout/custom_toolbar" />-->
+
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
 
     </RelativeLayout>
 

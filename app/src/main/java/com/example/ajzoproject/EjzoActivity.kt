@@ -1,31 +1,25 @@
 package com.example.ajzoproject
 
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.example.ajzoproject.databinding.ActivityEjzoBinding
+
 
 class EjzoActivity : AppCompatActivity() {
+
+    private lateinit var mBinding: ActivityEjzoBinding
+
+
     val ListName: MutableList<String> = arrayListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ejzo)
-        val tvwelcometo = findViewById<TextView>(R.id.tvwelcometo)
-        val imejzo = findViewById<ImageView>(R.id.imejzo)
-        val tvpersonal = findViewById<TextView>(R.id.tvpersonal)
-        val tvbusiness = findViewById<TextView>(R.id.tvbusiness)
-        val tvcountry = findViewById<TextView>(R.id.tvcountry)
-        val tvmobileno = findViewById<TextView>(R.id.tvmobileno)
-        val tv965kw = findViewById<TextView>(R.id.tv965kw)
-//        val tvnumber = findViewById<TextView>(R.id.znumber)
-        val tvlogin = findViewById<LinearLayout>(R.id.tvlogin)
-        val imarbitext = findViewById<ImageView>(R.id.imarbitext)
+        mBinding = ActivityEjzoBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
 
-        val etnumber = findViewById<EditText>(R.id.etnumber)
 
         // colors
 
@@ -35,27 +29,27 @@ class EjzoActivity : AppCompatActivity() {
 
         ListName.add("JMIL")
 
-        tvpersonal.setOnClickListener {
-            tvpersonal.setBackgroundResource(R.drawable.circle_shap_allo)
-            tvpersonal.setTextColor(blueColor)
-            tvbusiness.setBackgroundResource(R.drawable.circle_shap)
-            tvbusiness.setTextColor(greyColor)
+        mBinding.tvpersonal.setOnClickListener {
+            mBinding.tvpersonal.setBackgroundResource(R.drawable.circle_shap_allo)
+            mBinding.tvpersonal.setTextColor(blueColor)
+            mBinding.tvbusiness.setBackgroundResource(R.drawable.circle_shap)
+            mBinding.tvbusiness.setTextColor(greyColor)
         }
 
-        tvbusiness.setOnClickListener {
-            tvbusiness.setBackgroundResource(R.drawable.circle_shap_allo)
+        mBinding.tvbusiness.setOnClickListener {
+            mBinding.tvbusiness.setBackgroundResource(R.drawable.circle_shap_allo)
 
-            tvbusiness.setTextColor(blueColor)
+            mBinding.tvbusiness.setTextColor(blueColor)
 
-            tvpersonal.setBackgroundResource(R.drawable.circle_shap)
-            tvpersonal.setTextColor(greyColor)
+            mBinding.tvpersonal.setBackgroundResource(R.drawable.circle_shap)
+            mBinding.tvpersonal.setTextColor(greyColor)
         }
 
-        tvlogin.setOnClickListener {
+        mBinding.tvlogin.setOnClickListener {
 
-            var intentObj: Intent = Intent(this, LamereretensActivity::class.java)
-            var numberType = etnumber.text.toString()
-            var countryCode = tv965kw.text.toString()
+            val intentObj: Intent = Intent(this, LamereretensActivity::class.java)
+            val numberType = mBinding.etnumber.text.toString()
+            val countryCode = mBinding.tv965kw.text.toString()
             intentObj.putExtra("number", numberType)
             intentObj.putExtra("CountryCode", countryCode)
             startActivity(intentObj)

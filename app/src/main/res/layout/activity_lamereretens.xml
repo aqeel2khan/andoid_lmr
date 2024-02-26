@@ -157,19 +157,52 @@
      android:layout_marginStart="30dp"
      android:id="@+id/view2"
      android:layout_below="@+id/ll3"/>
- <TextView
+
+ <LinearLayout
+     android:id="@+id/tvlogin"
      android:layout_width="match_parent"
-     android:layout_height="50dp"
-     android:text="LOGIN"
-     android:gravity="center"
-     android:textSize="15sp"
-     android:background="@color/purple"
+     android:layout_height="45dp"
+     android:minHeight="50dp"
+     android:layout_below="@id/view2"
+     android:background="@drawable/blue_color_radius"
      android:layout_marginStart="30dp"
      android:layout_marginEnd="30dp"
-     android:id="@+id/tvlogin"
-     android:textColor="@color/grey"
      android:layout_marginTop="20dp"
-     android:layout_below="@+id/view2"/>
+     android:gravity="center"
+     >
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/arrow_right_white"
+      android:layout_marginRight="10dp"
+      android:layout_gravity="center"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="LOGIN"
+      android:textColor="@color/grey"
+      android:textSize="15sp"
+      />
+
+ </LinearLayout>
+
+<!-- <TextView-->
+<!--     android:id="@+id/tvlogin"-->
+<!--     android:layout_width="match_parent"-->
+<!--     android:layout_height="50dp"-->
+<!--     android:layout_below="@+id/view2"-->
+<!--     android:layout_marginStart="30dp"-->
+<!--     android:layout_marginTop="23dp"-->
+<!--     android:layout_marginEnd="30dp"-->
+<!--     android:background="@color/purple"-->
+<!--     android:gravity="center"-->
+<!--     android:text="LOGIN"-->
+<!--     android:textColor="@color/grey"-->
+<!--     android:textSize="15sp" />-->
+
  <ImageView
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
